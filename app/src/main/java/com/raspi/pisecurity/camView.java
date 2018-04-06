@@ -1,10 +1,10 @@
 package com.raspi.pisecurity;
 
-import android.content.Intent;
 import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.MediaController;
 import android.widget.VideoView;
 
 public class camView extends AppCompatActivity {
@@ -17,12 +17,21 @@ public class camView extends AppCompatActivity {
 
 
     public void PlayVideo(View v) {
-        final VideoView videoView = findViewById(R.id.videoView);
+        final VideoView videoView = (VideoView) findViewById(R.id.videoView);
 
-        String movieurl = "rtsp://192.168.1.233:8554/h264";
 
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(movieurl));
-        startActivity(intent);
+        //add controls to a MediaPlayer like play, pause.
+        MediaController mc = new MediaController(this);
+        videoView.setMediaController(mc);
+
+        //Set the path of Video or URI
+        videoView.setVideoURI(Uri.parse("rtsp://192.168.1.233:8554/h264"));
+        //
+
+        //Set the focus
+        videoView.requestFocus();
+
+        videoView.start();
     }
 
 
