@@ -17,6 +17,7 @@ public class MyFirebaseMessaging extends FirebaseMessagingService{
         super.onMessageReceived(remoteMessage);
         showNotification(remoteMessage.getNotification());
 
+
     }
 
     private void showNotification(RemoteMessage.Notification notification) {
