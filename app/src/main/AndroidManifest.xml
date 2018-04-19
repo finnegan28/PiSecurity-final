@@ -20,7 +20,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <!--
+
                    <activity android:name=".LoginActivity">
                    <intent-filter>
                        <action android:name="android.intent.action.MAIN" />
@@ -28,17 +28,12 @@
                        <category android:name="android.intent.category.LAUNCHER" />
                    </intent-filter>
                </activity>
-        -->
 
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".MainActivity"></activity>
 
         <activity android:name=".camView" />
+        <activity android:name=".RegisterActivity" />
         <service android:name=".Service.MyFirebaseIDService">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
