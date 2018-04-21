@@ -71,11 +71,17 @@ public class MainActivity extends AppCompatActivity {
         openStream.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, camView.class);
-                startActivity(i);
+                startActivity(new Intent(MainActivity.this, camView.class));
             }
         });
 
+        Button alertBtn = (Button) findViewById(R.id.alertbtn);
+        alertBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, Alerts.class));
+            }
+        });
 
         final Button btnSignOut = findViewById(R.id.sign_out_button);
         btnSignOut.setOnClickListener(new View.OnClickListener() {

@@ -21,6 +21,7 @@
         android:theme="@style/AppTheme">
 
 
+
                    <activity android:name=".LoginActivity">
                    <intent-filter>
                        <action android:name="android.intent.action.MAIN" />
@@ -31,9 +32,10 @@
 
 
         <activity android:name=".MainActivity"></activity>
-
+        <activity android:name=".Alerts" />
         <activity android:name=".camView" />
         <activity android:name=".RegisterActivity" />
+        <activity android:name=".Image"></activity>
         <service android:name=".Service.MyFirebaseIDService">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
@@ -44,7 +46,6 @@
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-        <activity android:name=".Alerts"></activity>
     </application>
 
 
