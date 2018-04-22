@@ -25,8 +25,11 @@ public class MainActivity extends AppCompatActivity {
     private FirebaseAuth.AuthStateListener mAuthListener;
 
     private void sendTokenToPi() {
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        String userID = user.getUid();
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("Token");
+        String tokenstring = "users/"+userID+"/token";
+        DatabaseReference myRef = database.getReference(tokenstring);
 
         myRef.setValue(Common.currentToken);
     }

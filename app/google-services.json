@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "329551193037",
+    "firebase_url": "https://pisec-662475.firebaseio.com",
+    "project_id": "pisec-662475",
+    "storage_bucket": "pisec-662475.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:329551193037:android:117085a77619a16f",
+        "android_client_info": {
+          "package_name": "com.raspi.pisecurity"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "329551193037-a2gc0ls10jt3u14vvopad9ahlkia191h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.raspi.pisecurity",
+            "certificate_hash": "2b9afffff0dd0174abfbf903529a46fa064fa9d2"
+          }
+        },
+        {
+          "client_id": "329551193037-5s4h58f01b1uec66v3eu1846hcj14tv6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJAATnqUUOuQW6LeMZiFkD6EqfbXP-bnc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "329551193037-5s4h58f01b1uec66v3eu1846hcj14tv6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
