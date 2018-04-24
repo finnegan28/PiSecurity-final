@@ -1,45 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="20dp"
     tools:context=".RegisterActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:gravity="center"
-        android:text="PiSec Registration Form"
-        android:textColor="#000"
-        android:textSize="20dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <EditText
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/EditText_User_EmailID"
-        android:hint="Enter Your Email Here"
-        android:gravity="center"
-        android:layout_below="@+id/textView"
-        android:layout_marginTop="20dp"
-        />
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/logo" />
 
-    <EditText
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/EditText_User_Password"
-        android:hint="Enter Your Password Here"
-        android:gravity="center"
-        android:inputType="textPassword"
-        android:layout_below="@+id/EditText_User_EmailID"/>
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:gravity="center"
+            android:text="PiSec Registration Form"
+            android:textColor="#000"
+            android:textSize="20dp" />
 
-    <Button
-        android:id="@+id/Button_SignUp"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/EditText_User_Password"
-        android:text="Register" />
+        <EditText
+            android:id="@+id/EditText_User_EmailID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:hint="Enter Your Email Here" />
+
+        <EditText
+            android:id="@+id/EditText_User_Password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/EditText_User_EmailID"
+            android:gravity="center"
+            android:hint="Enter Your Password Here"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/Button_SignUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/EditText_User_Password"
+            android:text="Register"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            tools:background="#40455d" />
+    </LinearLayout>
 
 </RelativeLayout>

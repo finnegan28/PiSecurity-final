@@ -27,7 +27,7 @@ public class LoginActivity extends AppCompatActivity {
     String EmailHolder, PasswordHolder;
 
     // Creating buttons.
-    Button Login,SignUP ;
+    Button Login,SignUP, ForgotPass;
 
     // Creating Boolean to hold EditText empty true false value.
     Boolean EditTextEmptyCheck;
@@ -50,6 +50,7 @@ public class LoginActivity extends AppCompatActivity {
         // Assign ID's to button.
         Login = (Button)findViewById(R.id.button_login);
         SignUP = (Button)findViewById(R.id.button_SignUP);
+        ForgotPass = (Button)findViewById(R.id.button_reset);
 
         progressDialog =  new ProgressDialog(LoginActivity.this);
 
@@ -111,6 +112,14 @@ public class LoginActivity extends AppCompatActivity {
 
             }
         });
+
+        ForgotPass.setOnClickListener(new View.OnClickListener() {
+                 @Override
+                 public void onClick(View v) { startActivity(new Intent(LoginActivity.this, ResetPassword.class));
+            }
+        });
+
+
     }
 
     // Creating method to check EditText is empty or not.
@@ -138,6 +147,7 @@ public class LoginActivity extends AppCompatActivity {
         }
 
     }
+
 
     // Creating login function.
     public void LoginFunction(){
@@ -178,6 +188,8 @@ public class LoginActivity extends AppCompatActivity {
                         }
                     }
                 });
+
+
 
     }
 

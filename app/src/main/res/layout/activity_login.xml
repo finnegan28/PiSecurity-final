@@ -1,58 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity"
-    android:layout_margin="20dp">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="0dp"
+    tools:context=".LoginActivity">
 
-    <TextView
-        android:id="@+id/textview1"
+    <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_height="fill_parent"
         android:gravity="center"
-        android:text="PiSec Login"
-        android:textSize="21dp"
-        android:textStyle="bold" />
-
-    <EditText
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:hint="Enter Your Email"
-        android:id="@+id/editText_email"
-        android:layout_below="@+id/textview1"
-        android:layout_marginTop="20dp"/>
-
-    <EditText
-        android:id="@+id/editText_password"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/editText_email"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:hint="Enter Your Password"
-        android:inputType="textPassword" />
-
-    <Button
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Click Here to Login"
-        android:id="@+id/button_login"
-        android:layout_marginTop="14dp"
-        android:layout_below="@+id/editText_password"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <Button
-        android:id="@+id/button_SignUP"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/button_login"
-        android:layout_marginTop="20dp"
-        android:text="Register Here" />
+        android:orientation="vertical"
+        android:padding="@dimen/activity_horizontal_margin">
 
 
-</RelativeLayout>
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="323dp"
+            android:layout_height="118dp"
+            app:srcCompat="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/textview1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="PiSec"
+            android:textSize="21dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editText_email"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textview1"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:hint="Enter Your Email" />
+
+        <EditText
+            android:id="@+id/editText_password"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText_email"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:hint="Enter Your Password"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/button_login"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/editText_password"
+            android:layout_marginTop="10dp"
+            android:text="Click Here to Login"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            tools:background="#40455d" />
+
+        <Button
+            android:id="@+id/button_SignUP"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button_login"
+            android:layout_marginTop="10dp"
+            android:text="Register Here"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            android:textColorLink="@color/common_google_signin_btn_text_dark_default"
+            tools:background="#40455d" />
+
+        <Button
+            android:id="@+id/button_reset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/common_google_signin_btn_text_dark_default"
+            android:text="Forgot password?" />
+
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
